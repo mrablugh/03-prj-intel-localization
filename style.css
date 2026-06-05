@@ -1,0 +1,731 @@
+@font-face {
+    font-family: "intel-clear";
+    src: url("https://www.intel.com/etc.clientlibs/settings/wcm/designs/ver/260203/intel/us/en/Fonts/resources/intel-clear-latin.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "intel-one";
+    src: url("https://www.intel.com/etc.clientlibs/settings/wcm/designs/ver/260203/intel/us/en/Fonts/resources/intelone-display-light.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "intel-one";
+    src: url("https://www.intel.com/etc.clientlibs/settings/wcm/designs/ver/260203/intel/us/en/Fonts/resources/intelone-display-regular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "intel-clear", Tahoma, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #262626;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "intel-one", "intel-clear", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+header {
+  width: 100%;
+}
+
+#header-nav {
+  height: 70px;  
+  background: #000f28;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+#header-logo {
+    display: flex;
+    width: 70px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    padding: 0;
+}
+
+.site-logo {
+    display: block;
+    width: 54px;
+    height: auto;
+}
+
+#header-box{
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-gradient: linear-gradient(180deg,rgba(255,255,255,0.15),rgba(255,255,255,0));
+    --swatch-neutral-0: #ffffff;
+    --swatch-neutral-50: #262626;
+    --swatch-neutral-100: #f7f7f7;
+    --swatch-neutral-110: #FAFBFC;
+    --swatch-neutral-150: #f2f2f2;
+    --swatch-neutral-160: #2F2F2F;
+    --swatch-neutral-200: #e8e8e8;
+    --swatch-neutral-300: #d9d9d9;
+    --swatch-neutral-700: #6e6e6e;
+    --swatch-neutral-750: #595959;
+    --swatch-neutral-800: #545454;
+    --swatch-neutral-850: #444444;
+    --swatch-neutral-900: #404040;
+    --swatch-neutral-950: #333333;
+    --swatch-neutral-1000: #262626;
+    --swatch-energy-300: #00c7fd;
+    --swatch-energy-310: #C8C8C8;
+    --swatch-classic-200: #0076d6;
+    --swatch-classic-300: #0054ae;
+    --swatch-classic-310: #5D5D5D;
+    --swatch-classic-400: #9D9D9D;
+    --swatch-classic-500: #05348f;
+    --swatch-classic-550: #3C3C3C;
+    --color-text-secondary-default: var(--swatch-neutral-100);
+    --color-text-secondary-inverse: var(--swatch-neutral-1000);
+    color-scheme: light dark;
+    --color-background: var(--swatch-neutral-100);
+    --color-text-primary-default: var(--swatch-neutral-1000);
+    --color-text-primary-inverse: var(--swatch-neutral-100);
+    --color-button-border: var(--swatch-classic-200);
+    --color-button-border-hover: var(--swatch-classic-500);
+    --color-button-text: var(--swatch-classic-300);
+    --color-button-text-hover: var(--swatch-classic-500);
+    font-weight: 400;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: "intel-clear","tahoma",Helvetica,"helvetica",Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.42857143;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    color: var(--color-text-primary-default);
+    margin-inline: calc((-100vw + 100%) / 2);
+    max-inline-size: none;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#header-box-content{
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-gradient: linear-gradient(180deg,rgba(255,255,255,0.15),rgba(255,255,255,0));
+    --swatch-neutral-0: #ffffff;
+    --swatch-neutral-50: #262626;
+    --swatch-neutral-100: #f7f7f7;
+    --swatch-neutral-110: #FAFBFC;
+    --swatch-neutral-150: #f2f2f2;
+    --swatch-neutral-160: #2F2F2F;
+    --swatch-neutral-200: #e8e8e8;
+    --swatch-neutral-300: #d9d9d9;
+    --swatch-neutral-700: #6e6e6e;
+    --swatch-neutral-750: #595959;
+    --swatch-neutral-800: #545454;
+    --swatch-neutral-850: #444444;
+    --swatch-neutral-900: #404040;
+    --swatch-neutral-950: #333333;
+    --swatch-neutral-1000: #262626;
+    --swatch-energy-300: #00c7fd;
+    --swatch-energy-310: #C8C8C8;
+    --swatch-classic-200: #0076d6;
+    --swatch-classic-300: #0054ae;
+    --swatch-classic-310: #5D5D5D;
+    --swatch-classic-400: #9D9D9D;
+    --swatch-classic-500: #05348f;
+    --swatch-classic-550: #3C3C3C;
+    --color-text-secondary-default: var(--swatch-neutral-100);
+    --color-text-secondary-inverse: var(--swatch-neutral-1000);
+    color-scheme: light dark;
+    --color-background: var(--swatch-neutral-100);
+    --color-text-primary-default: var(--swatch-neutral-1000);
+    --color-text-primary-inverse: var(--swatch-neutral-100);
+    --color-button-border: var(--swatch-classic-200);
+    --color-button-border-hover: var(--swatch-classic-500);
+    --color-button-text: var(--swatch-classic-300);
+    --color-button-text-hover: var(--swatch-classic-500);
+    font-weight: 400;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: "intel-clear","tahoma",Helvetica,"helvetica",Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.42857143;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    color: var(--color-text-primary-default);
+    --ihp-hero-no-image-background-color: var(--swatch-neutral-160);
+    --ihp-hero-no-image-header-background-color: var(--swatch-classic-310);
+    --ihp-hero-no-image-header-text-color: var(--swatch-neutral-100);
+    --ihp-hero-no-image-text-color: var(--swatch-neutral-1000);
+    --ihp-hero-no-image-button-color: var(--swatch-classic-310);
+    --ihp-hero-no-image-button-text-color: var(--swatch-neutral-100);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+}
+
+#header-subbox {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-gradient: linear-gradient(180deg,rgba(255,255,255,0.15),rgba(255,255,255,0));
+    --swatch-neutral-0: #ffffff;
+    --swatch-neutral-50: #262626;
+    --swatch-neutral-100: #f7f7f7;
+    --swatch-neutral-110: #FAFBFC;
+    --swatch-neutral-150: #f2f2f2;
+    --swatch-neutral-160: #2F2F2F;
+    --swatch-neutral-200: #e8e8e8;
+    --swatch-neutral-300: #d9d9d9;
+    --swatch-neutral-700: #6e6e6e;
+    --swatch-neutral-750: #595959;
+    --swatch-neutral-800: #545454;
+    --swatch-neutral-850: #444444;
+    --swatch-neutral-900: #404040;
+    --swatch-neutral-950: #333333;
+    --swatch-neutral-1000: #262626;
+    --swatch-energy-300: #00c7fd;
+    --swatch-energy-310: #C8C8C8;
+    --swatch-classic-200: #0076d6;
+    --swatch-classic-300: #0054ae;
+    --swatch-classic-310: #5D5D5D;
+    --swatch-classic-400: #9D9D9D;
+    --swatch-classic-500: #05348f;
+    --swatch-classic-550: #3C3C3C;
+    --color-text-secondary-default: var(--swatch-neutral-100);
+    --color-text-secondary-inverse: var(--swatch-neutral-1000);
+    color-scheme: light dark;
+    --color-background: var(--swatch-neutral-100);
+    --color-text-primary-default: var(--swatch-neutral-1000);
+    --color-text-primary-inverse: var(--swatch-neutral-100);
+    --color-button-border: var(--swatch-classic-200);
+    --color-button-border-hover: var(--swatch-classic-500);
+    --color-button-text: var(--swatch-classic-300);
+    --color-button-text-hover: var(--swatch-classic-500);
+    font-weight: 400;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: "intel-clear","tahoma",Helvetica,"helvetica",Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.42857143;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    color: var(--color-text-primary-default);
+    --ihp-hero-no-image-background-color: var(--swatch-neutral-160);
+    --ihp-hero-no-image-header-background-color: var(--swatch-classic-310);
+    --ihp-hero-no-image-header-text-color: var(--swatch-neutral-100);
+    --ihp-hero-no-image-text-color: var(--swatch-neutral-1000);
+    --ihp-hero-no-image-button-color: var(--swatch-classic-310);
+    --ihp-hero-no-image-button-text-color: var(--swatch-neutral-100);
+    background: var(--ihp-hero-no-image-background-color);
+    margin-inline: calc((-100vw + 100%)/2);
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    -webkit-box-flex: 1;
+    flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    padding-inline: 0 2.625rem;
+    padding-block: 2.875rem 3.75rem;
+    padding-inline-start: 4.25rem;
+    box-sizing: border-box;
+}
+
+#main-heading {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-gradient: linear-gradient(180deg,rgba(255,255,255,0.15),rgba(255,255,255,0));
+    --swatch-neutral-0: #ffffff;
+    --swatch-neutral-50: #262626;
+    --swatch-neutral-100: #f7f7f7;
+    --swatch-neutral-110: #FAFBFC;
+    --swatch-neutral-150: #f2f2f2;
+    --swatch-neutral-160: #2F2F2F;
+    --swatch-neutral-200: #e8e8e8;
+    --swatch-neutral-300: #d9d9d9;
+    --swatch-neutral-700: #6e6e6e;
+    --swatch-neutral-750: #595959;
+    --swatch-neutral-800: #545454;
+    --swatch-neutral-850: #444444;
+    --swatch-neutral-900: #404040;
+    --swatch-neutral-950: #333333;
+    --swatch-neutral-1000: #262626;
+    --swatch-energy-300: #00c7fd;
+    --swatch-energy-310: #C8C8C8;
+    --swatch-classic-200: #0076d6;
+    --swatch-classic-300: #0054ae;
+    --swatch-classic-310: #5D5D5D;
+    --swatch-classic-400: #9D9D9D;
+    --swatch-classic-500: #05348f;
+    --swatch-classic-550: #3C3C3C;
+    --color-text-secondary-default: var(--swatch-neutral-100);
+    --color-text-secondary-inverse: var(--swatch-neutral-1000);
+    color-scheme: light dark;
+    --color-background: var(--swatch-neutral-100);
+    --color-text-primary-default: var(--swatch-neutral-1000);
+    --color-text-primary-inverse: var(--swatch-neutral-100);
+    --color-button-border: var(--swatch-classic-200);
+    --color-button-border-hover: var(--swatch-classic-500);
+    --color-button-text: var(--swatch-classic-300);
+    --color-button-text-hover: var(--swatch-classic-500);
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    --ihp-hero-no-image-background-color: var(--swatch-neutral-160);
+    --ihp-hero-no-image-header-background-color: var(--swatch-classic-310);
+    --ihp-hero-no-image-header-text-color: var(--swatch-neutral-100);
+    --ihp-hero-no-image-text-color: var(--swatch-neutral-1000);
+    --ihp-hero-no-image-button-color: var(--swatch-classic-310);
+    --ihp-hero-no-image-button-text-color: var(--swatch-neutral-100);
+    background-color: var(--ihp-hero-no-image-header-background-color);
+    position: relative;
+    padding-block: 2.8125rem;
+    padding-inline: 4.875rem;
+    width: 57.5%;
+    box-sizing: border-box;
+    font-family: "intel-one","intel-clear",Helvetica,Arial,sans-serif;
+    color: var(--ihp-hero-no-image-header-text-color);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.208;
+    margin: 0;
+    font-size: 2.125rem;
+}
+
+/* The decorative box */
+#main-heading::after {
+  content: "";
+  display: block;
+  position: absolute;
+  
+  width: 46px; 
+  height: 46px;
+  
+  top: 100%;
+  left: 100%;
+
+  background-color: #C8C8C8;
+  z-index: 5;
+}
+
+#hero-description {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-gradient: linear-gradient(180deg,rgba(255,255,255,0.15),rgba(255,255,255,0));
+    --swatch-neutral-0: #ffffff;
+    --swatch-neutral-50: #262626;
+    --swatch-neutral-100: #f7f7f7;
+    --swatch-neutral-110: #FAFBFC;
+    --swatch-neutral-150: #f2f2f2;
+    --swatch-neutral-160: #2F2F2F;
+    --swatch-neutral-200: #e8e8e8;
+    --swatch-neutral-300: #d9d9d9;
+    --swatch-neutral-700: #6e6e6e;
+    --swatch-neutral-750: #595959;
+    --swatch-neutral-800: #545454;
+    --swatch-neutral-850: #444444;
+    --swatch-neutral-900: #404040;
+    --swatch-neutral-950: #333333;
+    --swatch-neutral-1000: #262626;
+    --swatch-energy-300: #00c7fd;
+    --swatch-energy-310: #C8C8C8;
+    --swatch-classic-200: #0076d6;
+    --swatch-classic-300: #0054ae;
+    --swatch-classic-310: #5D5D5D;
+    --swatch-classic-400: #9D9D9D;
+    --swatch-classic-500: #05348f;
+    --swatch-classic-550: #3C3C3C;
+    --color-text-secondary-default: var(--swatch-neutral-100);
+    --color-text-secondary-inverse: var(--swatch-neutral-1000);
+    color-scheme: light dark;
+    --color-background: var(--swatch-neutral-100);
+    --color-text-primary-default: var(--swatch-neutral-1000);
+    --color-text-primary-inverse: var(--swatch-neutral-100);
+    --color-button-border: var(--swatch-classic-200);
+    --color-button-border-hover: var(--swatch-classic-500);
+    --color-button-text: var(--swatch-classic-300);
+    --color-button-text-hover: var(--swatch-classic-500);
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    --ihp-hero-no-image-background-color: var(--swatch-neutral-160);
+    --ihp-hero-no-image-header-background-color: var(--swatch-classic-310);
+    --ihp-hero-no-image-header-text-color: var(--swatch-neutral-100);
+    --ihp-hero-no-image-text-color: var(--swatch-neutral-1000);
+    --ihp-hero-no-image-button-color: var(--swatch-classic-310);
+    --ihp-hero-no-image-button-text-color: var(--swatch-neutral-100);
+    font-family: "intel-one","intel-clear",Helvetica,Arial,sans-serif;
+    color: var(--ihp-hero-no-image-header-text-color);
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    padding-top: 40px;
+}
+
+#timeline{
+    color: #262626;
+    line-height: 1.25;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+    box-sizing: border-box;
+    flex-shrink: unset;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+}
+
+.timeline-card {
+    box-sizing: border-box;
+    color: #0068b5;
+    text-decoration: none;
+    position: relative;
+    line-height: 0;
+    min-height: 400px;
+    overflow: hidden;
+    z-index: 1;
+    flex: 0 0 clamp(320px, 70vw, 560px);
+    min-width: clamp(320px, 70vw, 560px);
+    scroll-snap-align: start;
+    cursor: default;
+}
+
+.timeline-media {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    z-index: 0;
+}
+
+.timeline-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.timeline-text {
+    line-height: 0;
+    cursor: default;
+    box-sizing: border-box;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transition: all .35s ease-in-out;
+    position: relative;
+    z-index: 2;
+    padding: 3rem 20%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.timeline-card:hover .timeline-media img {
+    transform: scale(1.03);
+}
+
+.timeline-media img {
+    transition: transform 0.35s ease-in-out;
+}
+
+.timeline-year {
+    cursor: default;
+    text-align: center;
+    box-sizing: border-box;
+    color: inherit;
+    font-family: "intel-one","intel-clear",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.25;
+    margin: 0 0 1.5rem;
+    font-size: 2.25rem;
+    margin-bottom: .5rem;
+}
+
+.timeline-headline {
+    cursor: default;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 0 11px;
+    line-height: 1.25;
+    margin-bottom: 0;
+}
+
+.timeline-caption {
+    cursor: default;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    position: absolute;
+    bottom: 3rem;
+    left: 0;
+    right: 0;
+    max-width: 36rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
+    line-height: 1.5;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0.75rem);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.timeline-card:hover .timeline-caption {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    margin-bottom: 0;
+}
+
+.footer{
+    box-sizing: border-box;
+    line-height: 1.25;
+    color: #fff;
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
+    margin: 0;
+    text-align: center;
+    background-color: #41728a;
+}
+
+.footer-content{
+    line-height: 1.25;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: min(1170px, 100%);
+    max-width: 100%;
+}
+
+.footer-text-container{
+    line-height: 1.25;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-text {
+    line-height: 1.25;
+    color: #fff;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 1rem;
+    text-align: left;
+    padding: .3rem;
+}
+
+.footer-instructions {
+    color: #fff;
+    text-align: left;
+    box-sizing: border-box;
+    line-height: 1.25;
+    margin: .25rem 0;
+}
+
+@media (max-width: 960px) {
+    #timeline {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        gap: 0;
+        padding: 0;
+    }
+
+    .timeline-card {
+        display: block;
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        min-height: 320px;
+        margin: 0;
+    }
+
+    .timeline-text {
+        padding: 2rem 1.25rem;
+    }
+
+    .timeline-caption {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        transition: none;
+        position: static;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        margin-top: 0.75rem;
+    }
+
+    #header-box-content {
+        padding-inline: 0;
+        padding-block: 2rem 2.5rem;
+    }
+
+    #header-subbox {
+        width: 100%;
+    }
+
+    #main-heading {
+        width: 100%;
+        padding-inline: 1rem;
+    }
+
+    #main-heading::after {
+        display: none;
+    }
+}
