@@ -34,7 +34,8 @@
   </style>
 </head>
 <body>
-  <header>
+  <a class="skip-link visually-hidden-focusable" href="#main-content">Skip to main content</a>
+  <header role="banner">
     <div id="header-nav">
       <div id="header-logo">
         <img class="site-logo" src="img/intel-header-logo.svg" alt="Intel Logo" />
@@ -58,14 +59,17 @@
     </div>
   </header>
 
-  <section id="timeline">
+  <main id="main-content" role="main">
 
-    <div class="timeline-card timeline-card--1968">
+  <section id="timeline" role="list" aria-label="Timeline">
+    <h2 id="timeline-heading" class="visually-hidden">Timeline</h2>
+
+    <div class="timeline-card timeline-card--1968" role="listitem" tabindex="0" aria-labelledby="timeline-year-1968">
       <figure class="timeline-media">
         <img src="img/1.jpg" alt="Background image for Intel Founded" loading="lazy" />
       </figure>
       <div class="timeline-text">
-        <h2 class="timeline-year">1968</h2>
+        <h2 class="timeline-year" id="timeline-year-1968">1968</h2>
         <h3 class="timeline-headline">Intel Founded</h3>
         <p class="timeline-caption">
           Robert Noyce and Gordon Moore rename the newly formed company 
@@ -75,12 +79,12 @@
       </div>
     </div>
 
-    <div class="timeline-card timeline-card--1971">
+    <div class="timeline-card timeline-card--1971" role="listitem" tabindex="0" aria-labelledby="timeline-year-1971">
       <figure class="timeline-media">
         <img src="img/2.jpg" alt="Background image for First Microprocessor" loading="lazy" />
       </figure>
       <div class="timeline-text">
-        <h2 class="timeline-year">1971</h2>
+        <h2 class="timeline-year" id="timeline-year-1971">1971</h2>
         <h3 class="timeline-headline">First Microprocessor</h3>
         <p class="timeline-caption">
           Intel debuts the 4004, the world's first commercial microprocessor, 
@@ -90,12 +94,12 @@
       </div>
     </div>
 
-    <div class="timeline-card timeline-card--1978">
+    <div class="timeline-card timeline-card--1978" role="listitem" tabindex="0" aria-labelledby="timeline-year-1978">
       <figure class="timeline-media">
         <img src="img/3.jpg" alt="Background image for 8086 Processor" loading="lazy" />
       </figure>
       <div class="timeline-text">
-        <h2 class="timeline-year">1978</h2>
+        <h2 class="timeline-year" id="timeline-year-1978">1978</h2>
         <h3 class="timeline-headline">8086 Processor</h3>
         <p class="timeline-caption">
           Launch of the 8086 processor, establishing the x86 architecture 
@@ -104,12 +108,12 @@
       </div>
     </div>
 
-    <div class="timeline-card timeline-card--1985">
+    <div class="timeline-card timeline-card--1985" role="listitem" tabindex="0" aria-labelledby="timeline-year-1985">
       <figure class="timeline-media">
         <img src="img/4.jpg" alt="Background image for 386 Processor" loading="lazy" />
       </figure>
       <div class="timeline-text">
-        <h2 class="timeline-year">1985</h2>
+        <h2 class="timeline-year" id="timeline-year-1985">1985</h2>
         <h3 class="timeline-headline">386 Processor</h3>
         <p class="timeline-caption">
           Intel introduces the 386 processor with 32-bit architecture, 
@@ -119,12 +123,12 @@
       </div>
     </div>
 
-    <div class="timeline-card timeline-card--2006">
+    <div class="timeline-card timeline-card--2006" role="listitem" tabindex="0" aria-labelledby="timeline-year-2006">
       <figure class="timeline-media">
         <img src="img/5.png" alt="Background image for Peak GHG Emissions" loading="lazy" />
       </figure>
       <div class="timeline-text">
-        <h2 class="timeline-year">2006</h2>
+        <h2 class="timeline-year" id="timeline-year-2006">2006</h2>
         <h3 class="timeline-headline">Peak GHG Emissions</h3>
         <p class="timeline-caption">
           This year marks Intel's highest annual greenhouse gas emissions 
@@ -135,12 +139,12 @@
       </div>
     </div>
 
-    <div class="timeline-card timeline-card--2020">
+    <div class="timeline-card timeline-card--2020" role="listitem" tabindex="0" aria-labelledby="timeline-year-2020">
       <figure class="timeline-media">
         <img src="img/6.png" alt="Background image for RISE Strategy" loading="lazy" />
       </figure>
       <div class="timeline-text">
-        <h2 class="timeline-year">2020</h2>
+        <h2 class="timeline-year" id="timeline-year-2020">2020</h2>
         <h3 class="timeline-headline">RISE Strategy</h3>
         <p class="timeline-caption">
           Intel launches its RISE (Responsible, Inclusive, Sustainable, 
@@ -150,12 +154,12 @@
       </div>
     </div>
 
-    <div class="timeline-card timeline-card--2022">
+    <div class="timeline-card timeline-card--2022" role="listitem" tabindex="0" aria-labelledby="timeline-year-2022">
       <figure class="timeline-media">
         <img src="img/7.png" alt="Background image for Net-Zero By 2040" loading="lazy" />
       </figure>
       <div class="timeline-text">
-        <h2 class="timeline-year">2022</h2>
+        <h2 class="timeline-year" id="timeline-year-2022">2022</h2>
         <h3 class="timeline-headline">Net-Zero By 2040</h3>
         <p class="timeline-caption">
           Intel announces its commitment to achieve net-zero greenhouse 
@@ -165,12 +169,12 @@
       </div>
     </div>
 
-    <div class="timeline-card timeline-card--2023">
+    <div class="timeline-card timeline-card--2023" role="listitem" tabindex="0" aria-labelledby="timeline-year-2023">
       <figure class="timeline-media">
         <img src="img/8.png" alt="Background image for Renewable Electricity" loading="lazy" />
       </figure>
       <div class="timeline-text">
-        <h2 class="timeline-year">2023</h2>
+        <h2 class="timeline-year" id="timeline-year-2023">2023</h2>
         <h3 class="timeline-headline">Renewable Electricity</h3>
         <p class="timeline-caption">
           The company achieves 99% renewable electricity usage worldwide, 
@@ -180,12 +184,12 @@
       </div>
     </div>
 
-    <div class="timeline-card timeline-card--2024">
+    <div class="timeline-card timeline-card--2024" role="listitem" tabindex="0" aria-labelledby="timeline-year-2024">
       <figure class="timeline-media">
         <img src="img/9.png" alt="Background image for Sustainability Summit" loading="lazy" />
       </figure>
       <div class="timeline-text">
-        <h2 class="timeline-year">2024</h2>
+        <h2 class="timeline-year" id="timeline-year-2024">2024</h2>
         <h3 class="timeline-headline">Sustainability Summit</h3>
         <p class="timeline-caption">
           Intel hosts its first Sustainability Summit, uniting suppliers, 
@@ -214,13 +218,13 @@
         <div class="col">
           <div class="card h-100 border-0 rounded-0 custom-card">
             <div class="card-body d-flex flex-column p-4">
-              <h2 class="card-title h4"><i class="bi bi-chevron-up"></i> RISE Strategy</h2>
+              <h2 class="card-title h4"><i class="bi bi-chevron-up" aria-hidden="true"></i> RISE Strategy</h2>
               <p class="card-text">
                 Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy,
                 Intel sets ambitious 2030 goals, including driving industry-wide
                 progress on climate action, water stewardship, and waste reduction.
               </p>
-              <a href="#" class="mt-auto custom-link">Learn More</a>
+              <button type="button" class="mt-auto custom-link" aria-label="Learn more about RISE Strategy">Learn More</button>
             </div>
           </div>
         </div>
@@ -229,14 +233,14 @@
         <div class="col">
           <div class="card h-100 border-0 rounded-0 custom-card">
             <div class="card-body d-flex flex-column p-4">
-              <h2 class="card-title h4"><i class="bi bi-leaf"></i> Commitment</h2>
+              <h2 class="card-title h4"><i class="bi bi-leaf" aria-hidden="true"></i> Commitment</h2>
               <p class="card-text">
                 In 2022, Intel pledged to achieve net-zero greenhouse gas emissions
                 (Scope 1 and 2) by 2040. This commitment builds on decades of
                 environmental initiatives and partnerships across the semiconductor
                 industry.
               </p>
-              <a href="#" class="mt-auto custom-link">Learn More</a>
+              <button type="button" class="mt-auto custom-link" aria-label="Learn more about Intel's commitment to net-zero">Learn More</button>
             </div>
           </div>
         </div>
@@ -245,14 +249,14 @@
         <div class="col">
           <div class="card h-100 border-0 rounded-0 custom-card">
             <div class="card-body d-flex flex-column p-4">
-              <h2 class="card-title h4"><i class="bi bi-globe-americas"></i> Water &amp; Waste</h2>
+              <h2 class="card-title h4"><i class="bi bi-globe-americas" aria-hidden="true"></i> Water &amp; Waste</h2>
               <p class="card-text">
                 Intel conserves billions of gallons of water annually and
                 collaborates with local communities to restore watersheds.
                 Intel also upcycles and recycles materials to reduce waste and
                 advance a circular economy.
               </p>
-              <a href="#" class="mt-auto custom-link">Learn More</a>
+              <button type="button" class="mt-auto custom-link" aria-label="Learn more about water and waste initiatives">Learn More</button>
             </div>
           </div>
         </div>
@@ -271,26 +275,28 @@
               <p class="text-muted">Get updates about Intel's sustainability initiatives.</p>
 
               <form class="needs-validation" novalidate>
+                <div id="form-errors" role="alert" aria-live="assertive" class="visually-hidden"></div>
                 <div class="mb-3">
                   <label for="subscriber-email" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="subscriber-email" placeholder="you@example.com" required>
-                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                  <input type="email" class="form-control" id="subscriber-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="email-feedback">
+                  <div id="email-feedback" class="invalid-feedback">Please enter a valid email address.</div>
                 </div>
 
                 <div class="mb-3">
                   <label for="subscriber-name" class="form-label">Name (optional)</label>
-                  <input type="text" class="form-control" id="subscriber-name" placeholder="Your name">
+                  <input type="text" class="form-control" id="subscriber-name" name="name" placeholder="Your name" autocomplete="name">
                 </div>
 
                 <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="subscriber-consent" required>
+                  <input type="checkbox" class="form-check-input" id="subscriber-consent" name="consent" required aria-describedby="consent-feedback">
                   <label class="form-check-label" for="subscriber-consent">I agree to receive emails about sustainability.</label>
-                  <div class="invalid-feedback">You must agree before subscribing.</div>
+                  <div id="consent-feedback" class="invalid-feedback">You must agree before subscribing.</div>
                 </div>
 
                 <div class="d-grid">
                   <button class="btn custom-blue" type="submit">Subscribe</button>
                 </div>
+                <div id="subscribe-status" role="status" aria-live="polite" class="visually-hidden"></div>
               </form>
 
             </div>
@@ -306,9 +312,27 @@
       var forms = document.querySelectorAll('.needs-validation')
       Array.prototype.slice.call(forms).forEach(function (form) {
         form.addEventListener('submit', function (event) {
+          var formErrors = document.getElementById('form-errors')
+          // clear previous errors
+          if (formErrors) { formErrors.innerText = ''; formErrors.classList.add('visually-hidden') }
+
           if (!form.checkValidity()) {
             event.preventDefault()
             event.stopPropagation()
+            // collect invalid fields and announce a concise message
+            var invalids = form.querySelectorAll(':invalid')
+            var messages = []
+            Array.prototype.slice.call(invalids).forEach(function (el) {
+              var label = form.querySelector('label[for="' + el.id + '"]')
+              var name = label ? label.innerText : (el.name || el.id || 'field')
+              messages.push(name + ' is invalid.')
+            })
+            if (formErrors && messages.length) {
+              formErrors.innerText = messages.join(' ')
+              formErrors.classList.remove('visually-hidden')
+            }
+            // Shift focus to the first invalid control for keyboard users
+            if (invalids.length) { invalids[0].focus() }
           } else {
             // demo success state: prevent actual submit and show confirmation
             event.preventDefault()
@@ -317,14 +341,23 @@
             btn.classList.add('btn-primary')
             btn.innerText = 'Subscribed ✓'
             btn.disabled = true
+            var status = document.getElementById('subscribe-status')
+            if (status) {
+              status.classList.remove('visually-hidden')
+              status.innerText = 'Subscription successful. Thank you.'
+            }
           }
           form.classList.add('was-validated')
         }, false)
       })
+
+      // Timeline keyboard toggle removed — cards remain hover-only for captions
     })()
   </script>
 
-<footer id="custom-footer">
+  </main>
+
+<footer id="custom-footer" role="contentinfo">
     <div class="footer-container">
         <!-- Logo Section -->
         <div class="logo-container">

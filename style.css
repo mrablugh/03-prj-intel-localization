@@ -950,6 +950,15 @@ header {
     text-decoration: underline;
 }
 
+/* Increase touch target size for footer links */
+#custom-footer .secondary-links a {
+    padding: 8px 10px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #custom-footer small { font-size: 0.875rem; color: inherit; }
 
 @media (max-width: 768px) {
@@ -961,4 +970,69 @@ header {
     #custom-footer .secondary-links { order: 1; width: 100%; justify-content: flex-start; }
     #custom-footer .logo-container { order: 2; width: 100%; display: flex; justify-content: center; }
     #custom-footer .logo-container img { max-width: 140px; height: auto; }
+}
+
+/* Accessibility helpers and focus styles */
+.visually-hidden {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.visually-hidden-focusable:focus,
+.skip-link:focus {
+    position: static;
+    left: 0.5rem;
+    top: 0.5rem;
+    width: auto;
+    height: auto;
+    padding: .5rem .75rem;
+    background: var(--swatch-classic-500);
+    color: #fff;
+    border-radius: 4px;
+}
+
+.timeline-card:focus {
+    outline: 3px solid var(--swatch-classic-500);
+    outline-offset: 4px;
+}
+
+.custom-link:focus,
+.btn.custom-blue:focus,
+.card .btn.custom-link:focus {
+    outline: 3px solid var(--swatch-classic-500);
+    outline-offset: 2px;
+    box-shadow: none;
+}
+
+/* Show timeline captions for keyboard focus (not only hover) */
+.timeline-card:focus .timeline-caption,
+.timeline-card:focus-within .timeline-caption {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Show caption when programmatically expanded */
+/* removed: .timeline-card.expanded rules (timeline keyboard toggle reverted) */
+
+/* Ensure interactive targets meet touch-size recommendations */
+.custom-link, .btn.custom-blue {
+    padding: .75rem 1rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
