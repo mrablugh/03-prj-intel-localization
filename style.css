@@ -894,7 +894,71 @@ header {
   background-color: #0068b5;
 }
 
-footer {
+#custom-footer {
+    background-color: #e7e7e7;
+    padding: 20px;
+    font-family: "intel-clear", Tahoma, Helvetica, Arial, sans-serif;
+    color: #262626;
+}
+
+#custom-footer .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row; /* Logo on left, list on right */
+    align-items: center;
+    gap: 40px; /* Space between logo and list */
+}
+
+#custom-footer .logo-container img {
+    display: block;
+}
+
+/* inline, small, muted footer links with separators */
+#custom-footer .secondary-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+/* each list item shows a separator (pipe) except the first */
+#custom-footer .secondary-links li {
+    margin: 0 0.5rem;
+    color: #262626; /* match page black */
+    font-size: .875rem;
+    line-height: 1;
+}
+
+#custom-footer .secondary-links li + li::before {
+    content: "|";
+    display: inline-block;
+    margin-right: 0.5rem;
+    color: #262626; /* separator uses same black */
+}
+
+#custom-footer .secondary-links a {
+    text-decoration: none;
+    color: #262626; /* match page black */
+}
+
+#custom-footer .secondary-links a:hover {
+    color: #000000; /* slightly darker on hover */
+    text-decoration: underline;
+}
+
+#custom-footer small { font-size: 0.875rem; color: inherit; }
+
+@media (max-width: 768px) {
+    #custom-footer .footer-container { flex-direction: column; gap: 12px; align-items: flex-start; }
+    #custom-footer .secondary-links { gap: 8px; }
+    #custom-footer .secondary-links li + li::before { display: none; }
+}
+
+/* footer {
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
@@ -1477,16 +1541,16 @@ footer {
 @media (max-width: 768px) {
     .footer-links {
         display: flex;
-        flex-direction: column; /* Stacks links vertically */
-        align-items: center;    /* Centers them */
+        flex-direction: column;
+        align-items: center;
         text-align: center;
         padding: 10px 0;
     }
 
     .footer-links li {
-        display: block;         /* Takes full width */
-        margin-right: 0;        /* Removes horizontal spacing */
-        padding: 8px 0;         /* Increases tap target size */
+        display: block;
+        margin-right: 0;
+        padding: 8px 0;
     }
 }
 
@@ -1558,4 +1622,4 @@ footer {
     color: #262626;
     box-sizing: border-box;
     padding-right: 4em;
-}
+} */
