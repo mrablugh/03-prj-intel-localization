@@ -888,6 +888,12 @@ header {
     background: #fff;
 }
 
+.btn.custom-blue
+{
+  color: #fff;  
+  background-color: #0068b5;
+}
+
 footer {
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
