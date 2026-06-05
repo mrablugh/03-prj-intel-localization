@@ -956,4 +956,9 @@ header {
     #custom-footer .footer-container { flex-direction: column; gap: 12px; align-items: flex-start; }
     #custom-footer .secondary-links { gap: 8px; }
     #custom-footer .secondary-links li + li::before { display: none; }
+
+    /* Place the logo below the links on small screens */
+    #custom-footer .secondary-links { order: 1; width: 100%; justify-content: flex-start; }
+    #custom-footer .logo-container { order: 2; width: 100%; display: flex; justify-content: center; }
+    #custom-footer .logo-container img { max-width: 140px; height: auto; }
 }
