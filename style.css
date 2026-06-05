@@ -914,6 +914,15 @@ header {
     display: block;
 }
 
+/* Improve contrast for the footer logo: light background, padding and subtle shadow */
+#custom-footer .logo-container {
+    /* dark plate so white logo remains visible */
+    background-color: #000f28; /* brand dark blue */
+    padding: 6px 8px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
 /* inline, small, muted footer links with separators */
 #custom-footer .secondary-links {
     display: flex;
