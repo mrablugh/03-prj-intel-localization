@@ -920,9 +920,9 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    flex-direction: row; /* Logo on left, list on right */
+    flex-direction: row;
     align-items: center;
-    gap: 40px; /* Space between logo and list */
+    gap: 40px;
 }
 
 [dir="rtl"] #custom-footer .footer-container {
@@ -933,16 +933,13 @@ header {
     display: block;
 }
 
-/* Improve contrast for the footer logo: light background, padding and subtle shadow */
 #custom-footer .logo-container {
-    /* dark plate so white logo remains visible */
-    background-color: #000f28; /* brand dark blue */
+    background-color: #000f28;
     padding: 6px 8px;
     border-radius: 6px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-/* inline, small, muted footer links with separators */
 #custom-footer .secondary-links {
     display: flex;
     flex-direction: row;
@@ -953,10 +950,9 @@ header {
     align-items: center;
 }
 
-/* each list item shows a separator (pipe) except the first */
 #custom-footer .secondary-links li {
     margin: 0 0.5rem;
-    color: #262626; /* match page black */
+    color: #262626;
     font-size: .875rem;
     line-height: 1;
 }
@@ -965,7 +961,7 @@ header {
     content: "|";
     display: inline-block;
     margin-right: 0.5rem;
-    color: #262626; /* separator uses same black */
+    color: #262626;
 }
 
 [dir="rtl"] #custom-footer .secondary-links li + li::before {
@@ -975,21 +971,17 @@ header {
 
 #custom-footer .secondary-links a {
     text-decoration: none;
-    color: #262626; /* match page black */
-}
-
-#custom-footer .secondary-links a:hover {
-    color: #000000; /* slightly darker on hover */
-    text-decoration: underline;
-}
-
-/* Increase touch target size for footer links */
-#custom-footer .secondary-links a {
+    color: #262626;
     padding: 8px 10px;
     min-height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+}
+
+#custom-footer .secondary-links a:hover {
+    color: #000000;
+    text-decoration: underline;
 }
 
 #custom-footer small { font-size: 0.875rem; color: inherit; }
@@ -999,13 +991,11 @@ header {
     #custom-footer .secondary-links { gap: 8px; }
     #custom-footer .secondary-links li + li::before { display: none; }
 
-    /* Place the logo below the links on small screens */
     #custom-footer .secondary-links { order: 1; width: 100%; justify-content: flex-start; }
     #custom-footer .logo-container { order: 2; width: 100%; display: flex; justify-content: center; }
     #custom-footer .logo-container img { max-width: 140px; height: auto; }
 }
 
-/* Accessibility helpers and focus styles */
 .visually-hidden {
     position: absolute !important;
     height: 1px; width: 1px;
@@ -1061,7 +1051,6 @@ header {
     box-shadow: none;
 }
 
-/* Show timeline captions for keyboard focus (not only hover) */
 .timeline-card:focus .timeline-caption,
 .timeline-card:focus-within .timeline-caption {
     opacity: 1;
@@ -1069,10 +1058,6 @@ header {
     transform: translateY(0);
 }
 
-/* Show caption when programmatically expanded */
-/* removed: .timeline-card.expanded rules (timeline keyboard toggle reverted) */
-
-/* Ensure interactive targets meet touch-size recommendations */
 .custom-link, .btn.custom-blue {
     padding: .75rem 1rem;
     min-height: 44px;
