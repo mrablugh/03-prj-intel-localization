@@ -309,6 +309,61 @@
   <script>
     (function () {
       'use strict'
+
+      var rtlLanguages = {
+        ar: true,
+        arc: true,
+        arq: true,
+        bqi: true,
+        dv: true,
+        fa: true,
+        he: true,
+        ku: true,
+        ps: true,
+        ur: true,
+        yi: true
+      }
+
+      function getBaseLanguage(lang) {
+        return String(lang || '').trim().toLowerCase().split('-')[0]
+      }
+
+      function updateDocumentDirection() {
+        var root = document.documentElement
+        var baseLang = getBaseLanguage(root.lang || root.getAttribute('lang'))
+        var direction = rtlLanguages[baseLang] ? 'rtl' : 'ltr'
+
+        if (root.getAttribute('dir') !== direction) {
+          root.setAttribute('dir', direction)
+        }
+
+        if (document.body && document.body.getAttribute('dir') !== direction) {
+          document.body.setAttribute('dir', direction)
+        }
+      }
+
+      updateDocumentDirection()
+
+      if (window.MutationObserver) {
+        var observer = new MutationObserver(function (mutations) {
+          for (var i = 0; i < mutations.length; i++) {
+            if (mutations[i].type === 'attributes' && mutations[i].attributeName === 'lang') {
+              updateDocumentDirection()
+              break
+            }
+          }
+        })
+
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] })
+
+        if (document.body) {
+          observer.observe(document.body, { attributes: true, attributeFilter: ['lang'] })
+        }
+      }
+
+      window.addEventListener('languagechange', updateDocumentDirection)
+      window.setInterval(updateDocumentDirection, 1000)
+
       var forms = document.querySelectorAll('.needs-validation')
       Array.prototype.slice.call(forms).forEach(function (form) {
         form.addEventListener('submit', function (event) {
