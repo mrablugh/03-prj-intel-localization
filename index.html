@@ -4,7 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link
+    id="bootstrap-stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    data-ltr-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    data-rtl-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+  />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="style.css" />
   <style>
@@ -278,7 +284,7 @@
                 <div id="form-errors" role="alert" aria-live="assertive" class="visually-hidden"></div>
                 <div class="mb-3">
                   <label for="subscriber-email" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="subscriber-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="email-feedback">
+                  <input type="email" class="form-control" id="subscriber-email" name="email" autocomplete="email" placeholder="you@example.com" dir="ltr" required aria-describedby="email-feedback">
                   <div id="email-feedback" class="invalid-feedback">Please enter a valid email address.</div>
                 </div>
 
@@ -332,6 +338,7 @@
         var root = document.documentElement
         var baseLang = getBaseLanguage(root.lang || root.getAttribute('lang'))
         var direction = rtlLanguages[baseLang] ? 'rtl' : 'ltr'
+        var bootstrapStylesheet = document.getElementById('bootstrap-stylesheet')
 
         if (root.getAttribute('dir') !== direction) {
           root.setAttribute('dir', direction)
@@ -339,6 +346,16 @@
 
         if (document.body && document.body.getAttribute('dir') !== direction) {
           document.body.setAttribute('dir', direction)
+        }
+
+        if (bootstrapStylesheet) {
+          var nextHref = direction === 'rtl'
+            ? bootstrapStylesheet.getAttribute('data-rtl-href')
+            : bootstrapStylesheet.getAttribute('data-ltr-href')
+
+          if (nextHref && bootstrapStylesheet.getAttribute('href') !== nextHref) {
+            bootstrapStylesheet.setAttribute('href', nextHref)
+          }
         }
       }
 
